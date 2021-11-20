@@ -4,8 +4,8 @@
   "author": "Hiroshiba Kazuyuki",
   "private": true,
   "engines": {
-    "node": ">=14.16 <15",
-    "npm": ">=6.14.11 <7"
+    "node": ">=14.16",
+    "npm": ">=6.14.11"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -20,6 +20,7 @@
     "electron:build": "vue-cli-service electron:build",
     "electron:build_pnever": "vue-cli-service electron:build --publish never",
     "electron:serve": "vue-cli-service electron:serve",
+    "preinstall": "npx npm-force-resolutions",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
     "license:generate": "node build/generateLicenses.js",
@@ -36,6 +37,7 @@
     "encoding-japanese": "1.0.30",
     "immer": "9.0.2",
     "markdown-it": "12.0.4",
+    "npm-force-resolutions": "^0.0.10",
     "quasar": "2.1.2",
     "source-map-support": "0.5.19",
     "systeminformation": "5.8.0",
@@ -87,5 +89,8 @@
     "typescript": "4.2.4",
     "vue-cli-plugin-electron-builder": "2.0.0",
     "yargs": "17.2.1"
+  },
+  "resolutions": {
+    "electron-builder": "22.14.5"
   }
 }
